@@ -59,20 +59,20 @@
             // textConnectionString
             // 
             this.textConnectionString.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textConnectionString.Location = new System.Drawing.Point(29, 375);
-            this.textConnectionString.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textConnectionString.Location = new System.Drawing.Point(33, 469);
+            this.textConnectionString.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textConnectionString.Name = "textConnectionString";
-            this.textConnectionString.Size = new System.Drawing.Size(77, 22);
+            this.textConnectionString.Size = new System.Drawing.Size(86, 26);
             this.textConnectionString.TabIndex = 1;
             this.textConnectionString.Visible = false;
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Location = new System.Drawing.Point(277, 373);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(312, 466);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 28);
+            this.button1.Size = new System.Drawing.Size(166, 35);
             this.button1.TabIndex = 4;
             this.button1.Text = "CONECTAR";
             this.button1.UseVisualStyleBackColor = true;
@@ -85,10 +85,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.axRDPViewer.Enabled = true;
             this.axRDPViewer.Location = new System.Drawing.Point(6, 9);
-            this.axRDPViewer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.axRDPViewer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.axRDPViewer.Name = "axRDPViewer";
             this.axRDPViewer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axRDPViewer.OcxState")));
-            this.axRDPViewer.Size = new System.Drawing.Size(632, 249);
+            this.axRDPViewer.Size = new System.Drawing.Size(288, 288);
             this.axRDPViewer.TabIndex = 5;
             // 
             // tabControl1
@@ -98,21 +98,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(16, 15);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Location = new System.Drawing.Point(18, 19);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(869, 353);
+            this.tabControl1.Size = new System.Drawing.Size(978, 441);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.axRDPViewer);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(861, 324);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage1.Size = new System.Drawing.Size(970, 408);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "VIEW";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -121,21 +121,21 @@
             // 
             this.tabPage2.Controls.Add(this.btnAtualizar);
             this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(861, 324);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage2.Size = new System.Drawing.Size(970, 408);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "LISTA";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(332, 7);
-            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtualizar.Location = new System.Drawing.Point(374, 9);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(144, 28);
+            this.btnAtualizar.Size = new System.Drawing.Size(162, 35);
             this.btnAtualizar.TabIndex = 1;
             this.btnAtualizar.Text = "ATUALIZAR";
             this.btnAtualizar.UseVisualStyleBackColor = true;
@@ -157,11 +157,12 @@
             this.Column4,
             this.Column5,
             this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(8, 43);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 54);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(843, 271);
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.Size = new System.Drawing.Size(948, 339);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -169,14 +170,17 @@
             // 
             this.Column2.DataPropertyName = "string";
             this.Column2.HeaderText = "string";
+            this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Visible = false;
+            this.Column2.Width = 150;
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "maquina";
             this.Column1.HeaderText = "MAQUINA";
+            this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Width = 130;
@@ -185,13 +189,16 @@
             // 
             this.Column3.DataPropertyName = "dtcad";
             this.Column3.HeaderText = "DATA SOLICITACAO";
+            this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
             // 
             // Column6
             // 
             this.Column6.DataPropertyName = "processador";
             this.Column6.HeaderText = "PROCESSADOR";
+            this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             this.Column6.Width = 300;
@@ -200,13 +207,16 @@
             // 
             this.Column4.DataPropertyName = "memoria";
             this.Column4.HeaderText = "MEMORIA";
+            this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
             // 
             // Column5
             // 
             this.Column5.DataPropertyName = "windows";
             this.Column5.HeaderText = "WINDOWS";
+            this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Width = 300;
@@ -215,27 +225,29 @@
             // 
             this.Column7.DataPropertyName = "idM";
             this.Column7.HeaderText = "ID";
+            this.Column7.MinimumWidth = 8;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.Width = 150;
             // 
             // lbNome
             // 
             this.lbNome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(116, 384);
+            this.lbNome.Location = new System.Drawing.Point(130, 480);
             this.lbNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(101, 17);
+            this.lbNome.Size = new System.Drawing.Size(119, 20);
             this.lbNome.TabIndex = 7;
             this.lbNome.Text = "SEL MAQUINA";
             // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.Location = new System.Drawing.Point(466, 372);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(524, 465);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 28);
+            this.button2.Size = new System.Drawing.Size(168, 35);
             this.button2.TabIndex = 8;
             this.button2.Text = "DESCONECTAR";
             this.button2.UseVisualStyleBackColor = true;
@@ -244,10 +256,10 @@
             // btnFinalizar
             // 
             this.btnFinalizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnFinalizar.Location = new System.Drawing.Point(787, 373);
-            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFinalizar.Location = new System.Drawing.Point(885, 466);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(99, 28);
+            this.btnFinalizar.Size = new System.Drawing.Size(111, 35);
             this.btnFinalizar.TabIndex = 9;
             this.btnFinalizar.Text = "FINALIZAR";
             this.btnFinalizar.UseVisualStyleBackColor = true;
@@ -256,19 +268,19 @@
             // lbId
             // 
             this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(623, 384);
+            this.lbId.Location = new System.Drawing.Point(701, 480);
             this.lbId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(19, 17);
+            this.lbId.Size = new System.Drawing.Size(21, 20);
             this.lbId.TabIndex = 10;
             this.lbId.Text = "id";
             this.lbId.Visible = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 407);
+            this.ClientSize = new System.Drawing.Size(1014, 509);
             this.Controls.Add(this.lbId);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.button2);
@@ -276,9 +288,10 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textConnectionString);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
-            this.Text = "ATENDER";
+            this.Text = "ATENDER HelpUsers";
             ((System.ComponentModel.ISupportInitialize)(this.axRDPViewer)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
