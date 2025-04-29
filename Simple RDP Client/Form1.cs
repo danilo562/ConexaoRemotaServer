@@ -16,7 +16,7 @@ namespace Simple_RDP_Client
 {
     public partial class Form1 : Form
     {
-        OdbcConnection conexao = new OdbcConnection(System.Configuration.ConfigurationManager.ConnectionStrings["programas1"].ConnectionString.ToString());
+        SqlConnection conexao = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["programas1"].ConnectionString.ToString());
     
         public Form1()
         {
@@ -56,7 +56,7 @@ namespace Simple_RDP_Client
             tabControl1.SelectedIndex = 0;
         }
 
-        public void carregaUSUARIO(OdbcConnection conexao)
+        public void carregaUSUARIO(SqlConnection conexao)
         {
             if (conexao.State == ConnectionState.Closed) //Validar a conexão
             {
@@ -67,7 +67,7 @@ namespace Simple_RDP_Client
             try
             {
 
-                OdbcDataAdapter ADAP = new OdbcDataAdapter("SELECT string,maquina,dtcad,processador,memoria,windows,idM FROM conexaoRemota where delet =''", conexao);
+                SqlDataAdapter ADAP = new SqlDataAdapter("SELECT string,maquina,dtcad,processador,memoria,windows,idM FROM conexaoRemota where delet =''", conexao);
                 DataSet DS = new DataSet();
 
                 
@@ -107,7 +107,7 @@ namespace Simple_RDP_Client
             }
         }
 
-        public void finalizarConexao(OdbcConnection conexao, string id)
+        public void finalizarConexao(SqlConnection conexao, string id)
         {
             if (conexao.State == ConnectionState.Closed) //Validar a conexão
             {
@@ -118,7 +118,7 @@ namespace Simple_RDP_Client
             {
                 string sql = "update conexaoRemota set delet='*' where idM='" + id + "'";
 
-                OdbcCommand cmd1 = new OdbcCommand(sql, conexao);
+                SqlCommand cmd1 = new SqlCommand(sql, conexao);
 
                 cmd1.ExecuteNonQuery();
                 carregaUSUARIO(conexao);
