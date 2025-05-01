@@ -34,6 +34,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.axRDPViewer = new AxRDPCOMAPILib.AxRDPViewer();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -51,18 +52,17 @@
             this.comboBoxResolucao = new System.Windows.Forms.ComboBox();
             this.btnAplicarResolucao = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.axRDPViewer = new AxRDPCOMAPILib.AxRDPViewer();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axRDPViewer)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axRDPViewer)).BeginInit();
             this.SuspendLayout();
             // 
             // textConnectionString
             // 
             this.textConnectionString.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textConnectionString.Location = new System.Drawing.Point(42, 487);
+            this.textConnectionString.Location = new System.Drawing.Point(62, 522);
             this.textConnectionString.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textConnectionString.Name = "textConnectionString";
             this.textConnectionString.Size = new System.Drawing.Size(86, 26);
@@ -72,7 +72,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Location = new System.Drawing.Point(290, 484);
+            this.button1.Location = new System.Drawing.Point(310, 519);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(166, 35);
@@ -92,7 +92,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1456, 459);
+            this.tabControl1.Size = new System.Drawing.Size(1497, 494);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
@@ -102,10 +102,23 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage1.Size = new System.Drawing.Size(1448, 426);
+            this.tabPage1.Size = new System.Drawing.Size(1489, 461);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "VIEW";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // axRDPViewer
+            // 
+            this.axRDPViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.axRDPViewer.Enabled = true;
+            this.axRDPViewer.Location = new System.Drawing.Point(60, 20);
+            this.axRDPViewer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.axRDPViewer.Name = "axRDPViewer";
+            this.axRDPViewer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axRDPViewer.OcxState")));
+            this.axRDPViewer.Size = new System.Drawing.Size(1024, 472);
+            this.axRDPViewer.TabIndex = 5;
             // 
             // tabPage2
             // 
@@ -224,7 +237,7 @@
             // 
             this.lbNome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(81, 495);
+            this.lbNome.Location = new System.Drawing.Point(101, 530);
             this.lbNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(119, 20);
@@ -234,7 +247,7 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.Location = new System.Drawing.Point(513, 484);
+            this.button2.Location = new System.Drawing.Point(533, 519);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 35);
@@ -246,7 +259,7 @@
             // btnFinalizar
             // 
             this.btnFinalizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnFinalizar.Location = new System.Drawing.Point(724, 484);
+            this.btnFinalizar.Location = new System.Drawing.Point(744, 519);
             this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(111, 35);
@@ -258,7 +271,7 @@
             // lbId
             // 
             this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(475, 484);
+            this.lbId.Location = new System.Drawing.Point(484, 528);
             this.lbId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(21, 20);
@@ -270,7 +283,7 @@
             // 
             this.comboBoxResolucao.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.comboBoxResolucao.FormattingEnabled = true;
-            this.comboBoxResolucao.Location = new System.Drawing.Point(885, 486);
+            this.comboBoxResolucao.Location = new System.Drawing.Point(905, 521);
             this.comboBoxResolucao.Name = "comboBoxResolucao";
             this.comboBoxResolucao.Size = new System.Drawing.Size(245, 28);
             this.comboBoxResolucao.TabIndex = 11;
@@ -278,7 +291,7 @@
             // btnAplicarResolucao
             // 
             this.btnAplicarResolucao.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAplicarResolucao.Location = new System.Drawing.Point(1151, 486);
+            this.btnAplicarResolucao.Location = new System.Drawing.Point(1171, 521);
             this.btnAplicarResolucao.Name = "btnAplicarResolucao";
             this.btnAplicarResolucao.Size = new System.Drawing.Size(179, 29);
             this.btnAplicarResolucao.TabIndex = 12;
@@ -288,33 +301,20 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1362, 486);
+            this.button3.Location = new System.Drawing.Point(1411, 517);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(84, 30);
             this.button3.TabIndex = 13;
             this.button3.Text = "enviar Comando";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // axRDPViewer
-            // 
-            this.axRDPViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.axRDPViewer.Enabled = true;
-            this.axRDPViewer.Location = new System.Drawing.Point(6, 9);
-            this.axRDPViewer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.axRDPViewer.Name = "axRDPViewer";
-            this.axRDPViewer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axRDPViewer.OcxState")));
-            this.axRDPViewer.Size = new System.Drawing.Size(288, 288);
-            this.axRDPViewer.TabIndex = 5;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1492, 527);
+            this.ClientSize = new System.Drawing.Size(1533, 562);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnAplicarResolucao);
             this.Controls.Add(this.comboBoxResolucao);
@@ -328,13 +328,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
-            this.Text = "ATENDER HelpUsers     V1.001";
+            this.Text = "ATENDER HelpUsers     V1.002";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axRDPViewer)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axRDPViewer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

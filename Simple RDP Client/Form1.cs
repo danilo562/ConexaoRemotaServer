@@ -34,6 +34,8 @@ namespace Simple_RDP_Client
             carregaUSUARIO(conexao);
             resolucao();
             this.KeyPreview = true;
+
+         
         }
 
         public static void Connect(string invitation, AxRDPViewer display, string userName, string password)
@@ -165,11 +167,27 @@ namespace Simple_RDP_Client
 
         public void resolucao()
         {
-            comboBoxResolucao.Items.Add("800x600");
-            comboBoxResolucao.Items.Add("1024x768");
-            comboBoxResolucao.Items.Add("1280x720");
-            comboBoxResolucao.Items.Add("1366x768");
-            comboBoxResolucao.Items.Add("1920x1080");
+            comboBoxResolucao.Items.Add("640x480");
+            comboBoxResolucao.Items.Add("854x480");     // FWVGA (16:9)
+            comboBoxResolucao.Items.Add("960x540");     // qHD
+            comboBoxResolucao.Items.Add("1024x600");    // WSVGA
+            comboBoxResolucao.Items.Add("1152x864");
+            comboBoxResolucao.Items.Add("1280x800");    // WXGA
+            comboBoxResolucao.Items.Add("1280x960");
+            comboBoxResolucao.Items.Add("1280x1024");   // SXGA
+            comboBoxResolucao.Items.Add("1360x768");
+            comboBoxResolucao.Items.Add("1440x900");    // WXGA+
+            comboBoxResolucao.Items.Add("1400x768");
+            comboBoxResolucao.Items.Add("1536x864");
+            comboBoxResolucao.Items.Add("1600x900");    // HD+
+            comboBoxResolucao.Items.Add("1600x1200");   // UXGA
+            comboBoxResolucao.Items.Add("1680x1050");   // WSXGA+
+            comboBoxResolucao.Items.Add("1920x1200");   // WUXGA
+            comboBoxResolucao.Items.Add("2048x1152");
+            comboBoxResolucao.Items.Add("2560x1080");   // UWHD
+            comboBoxResolucao.Items.Add("2560x1440");   // QHD / WQHD
+            comboBoxResolucao.Items.Add("3440x1440");   // UWQHD
+            comboBoxResolucao.Items.Add("3840x2160");   // 4K UHD
             comboBoxResolucao.SelectedIndex = 1; // Padrão
         }
 
@@ -182,7 +200,9 @@ namespace Simple_RDP_Client
 
             axRDPViewer.Width = largura;
             axRDPViewer.Height = altura;
+           // AjustarViewerProporcional( largura, altura);
         }
+
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
