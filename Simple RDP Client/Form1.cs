@@ -12,13 +12,14 @@ using AxRDPCOMAPILib;
 using System.Data.SqlClient;
 using System.Data.Odbc;
 using System.Runtime.InteropServices;
+using System.Configuration;
 
 namespace Simple_RDP_Client
 {
     public partial class Form1 : Form
     {
         SqlConnection conexao = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["programas1"].ConnectionString.ToString());
-
+        string stgConexao = System.Configuration.ConfigurationManager.ConnectionStrings["programas1"].ConnectionString.ToString();
 
         [DllImport("user32.dll")]
         private static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
@@ -50,13 +51,52 @@ namespace Simple_RDP_Client
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var valid = validaConexao();
+            
             try
             {
-                Connect(textConnectionString.Text, this.axRDPViewer, "", "");
+                if (valid == true)
+                {
+                    Connect(textConnectionString.Text, this.axRDPViewer, "", "");
+                }
             }
             catch (Exception)
             {
                 MessageBox.Show("Unable to connect to the Server");
+            }
+        }
+
+        private bool validaConexao()
+        {
+            string connStr = stgConexao;
+
+            using (var conexao = new SqlConnection(connStr))
+            {
+                conexao.Open();
+
+
+                string sql = "SELECT COUNT(*) FROM SessaoUsuarioRemoto WHERE Ativo = 1";
+                SqlCommand cmd = new SqlCommand(sql, conexao);
+                int ativos = (int)cmd.ExecuteScalar();
+
+                string sql1 = "select quant from qtdUsuarioRemoto";
+                SqlCommand cmd1 = new SqlCommand(sql1, conexao);
+                int qtd = (int)cmd1.ExecuteScalar();
+
+                if (ativos >= qtd)
+                {
+                    MessageBox.Show("Limite de usuários atingido. ");
+                    return false;
+                }
+
+                // Inserir nova sessão
+                sql = "INSERT INTO SessaoUsuarioRemoto (Usuario, DataLogin, Maquina, Ativo) VALUES (@Usuario, GETDATE(), @Maquina, 1)";
+                cmd = new SqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@Usuario", Environment.UserName);
+                cmd.Parameters.AddWithValue("@Maquina", Environment.MachineName);
+                cmd.ExecuteNonQuery();
+                conexao.Close();
+                return true;
             }
         }
 
@@ -106,7 +146,32 @@ namespace Simple_RDP_Client
 
         private void button2_Click(object sender, EventArgs e)
         {
+            desconectarConexaoRemota();
             disconnect(this.axRDPViewer);
+        }
+
+        private bool desconectarConexaoRemota()
+        {
+            try
+            {
+                string connStr = stgConexao;
+
+                using (var conexao = new SqlConnection(connStr))
+                {
+                    conexao.Open();
+                    string sql = "UPDATE SessaoUsuarioRemoto SET Ativo = 0 WHERE Usuario = @Usuario AND Maquina = @Maquina";
+                    SqlCommand cmd = new SqlCommand(sql, conexao);
+                    cmd.Parameters.AddWithValue("@Usuario", Environment.UserName);
+                    cmd.Parameters.AddWithValue("@Maquina", Environment.MachineName);
+                    cmd.ExecuteNonQuery();
+                    
+                    return true;
+                }
+            }
+            catch (Exception ex) {
+            var a = ex.Message;
+                return false;
+            }
         }
 
         private void btnFinalizar_Click(object sender, EventArgs e)
@@ -126,6 +191,7 @@ namespace Simple_RDP_Client
 
             if (result == DialogResult.Yes)
             {
+                desconectarConexaoRemota();
                 finalizarConexao(conexao, lbId.Text);
                 lbNome.Text = "";
             }

@@ -92,7 +92,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1497, 494);
+            this.tabControl1.Size = new System.Drawing.Size(1497, 470);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
@@ -102,7 +102,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage1.Size = new System.Drawing.Size(1489, 461);
+            this.tabPage1.Size = new System.Drawing.Size(1489, 437);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "VIEW";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -113,11 +113,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.axRDPViewer.Enabled = true;
-            this.axRDPViewer.Location = new System.Drawing.Point(60, 20);
+            this.axRDPViewer.Location = new System.Drawing.Point(8, 8);
             this.axRDPViewer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.axRDPViewer.Name = "axRDPViewer";
             this.axRDPViewer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axRDPViewer.OcxState")));
-            this.axRDPViewer.Size = new System.Drawing.Size(1024, 472);
+            this.axRDPViewer.Size = new System.Drawing.Size(1054, 326);
             this.axRDPViewer.TabIndex = 5;
             // 
             // tabPage2
@@ -128,7 +128,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage2.Size = new System.Drawing.Size(1448, 426);
+            this.tabPage2.Size = new System.Drawing.Size(1489, 461);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "LISTA";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -165,7 +165,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1426, 357);
+            this.dataGridView1.Size = new System.Drawing.Size(1426, 358);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -283,7 +283,8 @@
             // 
             this.comboBoxResolucao.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.comboBoxResolucao.FormattingEnabled = true;
-            this.comboBoxResolucao.Location = new System.Drawing.Point(905, 521);
+            this.comboBoxResolucao.Location = new System.Drawing.Point(904, 521);
+            this.comboBoxResolucao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxResolucao.Name = "comboBoxResolucao";
             this.comboBoxResolucao.Size = new System.Drawing.Size(245, 28);
             this.comboBoxResolucao.TabIndex = 11;
@@ -292,6 +293,7 @@
             // 
             this.btnAplicarResolucao.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAplicarResolucao.Location = new System.Drawing.Point(1171, 521);
+            this.btnAplicarResolucao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAplicarResolucao.Name = "btnAplicarResolucao";
             this.btnAplicarResolucao.Size = new System.Drawing.Size(179, 29);
             this.btnAplicarResolucao.TabIndex = 12;
@@ -301,7 +303,8 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1411, 517);
+            this.button3.Location = new System.Drawing.Point(1411, 518);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(84, 30);
             this.button3.TabIndex = 13;
